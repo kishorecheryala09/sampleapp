@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@4.1.8
         with:
-          name: £{{ env.package-name }}
+          name: ${{ env.package-name }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
