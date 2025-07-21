@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
 
@@ -21,7 +21,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{ env.HOME}}\myapp"
+        run: dotnet publish -c Release --property:PublishDir="${{ runer.temp }}\myapp"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@4.3.6
