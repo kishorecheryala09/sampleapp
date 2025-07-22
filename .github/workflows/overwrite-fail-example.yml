@@ -21,7 +21,7 @@ jobs:
 
       - name: Override VAR_1 at step level
         env:
-          VAR_1: "Step levl variable value" #This will override the job-level VAR_1
+          VAR_1: "Step level variable value" #This will override the job-level VAR_1
         run: |
           echo "VAR_1: $VAR_1"
 
