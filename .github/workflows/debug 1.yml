@@ -1,13 +1,15 @@
 name: Debug Workflow 1
 
-on:
-  workflow_dispatch
+on: [push, pull_request, issues, workflow_dispatch ]
 
 jobs:
   build-job:
     runs-on: windows-latest
 
     steps:
+
+      - name: Check Event Name
+        run: echo "Event that triggered this workflow is ${{ github.event_name }}"
 
       - name: checkout code
         uses: actions/checkout@4.1.7
