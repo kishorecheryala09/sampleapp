@@ -13,7 +13,7 @@ jobs:
         run: echo "VAR1=value set from first step">> "$GITHUB_ENV"
 
       - name: display value of VAR_1
-        run: echo "Value of VAR_1 is $VAR_1!
+        run: echo "Value of VAR_1 is $VAR_1"
 
       - name: Set color
         id: color-selector
